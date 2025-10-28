@@ -234,8 +234,6 @@ func (c *Client) NewRequest(ctx context.Context, method, relPath string, body, o
 		return nil, err
 	}
 
-	req = req.WithContext(ctx)
-
 	req.Header.Add("Content-Type", "application/json")
 	req.Header.Add("Accept", "application/json")
 	req.Header.Add("User-Agent", UserAgent)
